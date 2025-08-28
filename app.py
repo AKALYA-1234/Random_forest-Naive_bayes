@@ -3,7 +3,6 @@ import streamlit as st
 import pickle
 import numpy as np
 
-# Load trained model
 with open("student_model.pkl", "rb") as f:
     model = pickle.load(f)
 
@@ -22,6 +21,6 @@ if st.button("Predict"):
     prediction = model.predict(features)[0]
 
     if prediction == 1:
-        st.success("✅ The student is likely to PASS")
+        st.success(" The student is likely to PASS")
     else:
-        st.error("❌ The student is likely to FAIL")
+        st.error(" The student is likely to FAIL")
