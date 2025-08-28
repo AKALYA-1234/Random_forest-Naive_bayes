@@ -7,7 +7,7 @@ import numpy as np
 with open("student_model.pkl", "rb") as f:
     model = pickle.load(f)
 
-st.title(" Student Performance Predictor")
+st.title("🎓 Student Performance Predictor")
 st.write("Enter student details to predict if they will **Pass or Fail**")
 
 # Input fields
@@ -22,6 +22,6 @@ if st.button("Predict"):
     prediction = model.predict(features)[0]
 
     if prediction == 1:
-        st.success(" The student is likely to PASS")
+        st.success("✅ The student is likely to PASS")
     else:
-        st.error(" The student is likely to FAIL")
+        st.error("❌ The student is likely to FAIL")
